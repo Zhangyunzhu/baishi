@@ -42,8 +42,8 @@
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/your-username/qi-baishi-art-gallery.git
-   cd qi-baishi-art-gallery
+   git clone https://github.com/YOUR_USERNAME/baishi.git
+   cd baishi
    ```
 
 2. **安装依赖**
@@ -148,7 +148,7 @@ npm run build
 
 如有问题或建议，请通过以下方式联系：
 - 📧 Email: your-email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/your-username/qi-baishi-art-gallery/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/baishi/issues)
 
 ---
 
