@@ -73,26 +73,15 @@ const CustomCursor: React.FC = () => {
             isHovering ? 'w-4 h-10' : 'w-3 h-8'
           } -top-2 -left-2`}>
             
-            {/* 毛笔头基础形状 - 水滴形 */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#696969] via-[#2F4F4F] to-[#000000] rounded-b-full"
+            {/* 毛笔头基础形状 - 水滴形，尖端直接指向圆圈中心 */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#696969] via-[#2F4F4F] to-[#000000]"
                  style={{
-                   clipPath: 'ellipse(45% 100% at 50% 0%)',
+                   clipPath: 'polygon(50% 0%, 20% 60%, 30% 100%, 70% 100%, 80% 60%)',
                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
                  }} />
             
-            {/* 毛笔尖端 - 精确指向圆圈中心 */}
-            <div className="absolute bottom-0 right-0 w-1 h-3 bg-gradient-to-b from-[#2F4F4F] to-[#000000] rounded-full transform translate-x-1/2 translate-y-1/2" />
-            
-            {/* 毛丝纹理层 - 简化版本 */}
-            <div className="absolute inset-0 opacity-40">
-              {/* 主要毛丝 - 只保留中间的主要纹理 */}
-              <div className="absolute left-1/2 top-0 w-px h-full bg-gradient-to-b from-[#808080] to-[#2F2F2F] transform -translate-x-1/2" />
-              <div className="absolute left-1/3 top-1/4 w-px h-3/4 bg-gradient-to-b from-[#696969] to-[#2F2F2F]" />
-              <div className="absolute right-1/3 top-1/4 w-px h-3/4 bg-gradient-to-b from-[#696969] to-[#2F2F2F]" />
-            </div>
-            
-            {/* 毛笔头高光 */}
-            <div className="absolute top-1/4 left-1/4 w-px h-1/2 bg-gradient-to-b from-white/40 to-transparent" />
+            {/* 毛笔头高光 - 简化 */}
+            <div className="absolute top-1/4 left-1/3 w-px h-1/2 bg-gradient-to-b from-white/30 to-transparent" />
           </div>
         </div>
         
