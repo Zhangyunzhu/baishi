@@ -32,7 +32,7 @@ const CustomCursor: React.FC = () => {
   return (
     <motion.div
       className="fixed top-0 left-0 z-[9999] pointer-events-none hidden md:block brush-cursor"
-      style={{ x, y, translateX: '-15px', translateY: '-70px' }}
+      style={{ x, y }}
     >
       <motion.div
         className="relative"
@@ -42,13 +42,13 @@ const CustomCursor: React.FC = () => {
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        {/* 毛笔整体容器 - 斜向45度 */}
-        <div className="relative transform rotate-45 origin-center">
+        {/* 毛笔整体容器 - 斜向45度，笔尖对准鼠标位置 */}
+        <div className="relative" style={{ transform: 'rotate(45deg) translate(-6px, -20px)', transformOrigin: '0 0' }}>
           
           {/* 笔杆 - 木质/竹质 */}
           <div className={`absolute transition-all duration-300 ${
             isHovering ? 'w-2 h-16' : 'w-1.5 h-12'
-          } bg-gradient-to-b from-[#DEB887] via-[#D2B48C] to-[#CD853F] rounded-full -top-12 left-1/2 transform -translate-x-1/2 shadow-md border border-[#CD853F]/30`}>
+          } bg-gradient-to-b from-[#DEB887] via-[#D2B48C] to-[#CD853F] rounded-full top-0 left-1/2 transform -translate-x-1/2 shadow-md border border-[#CD853F]/30`}>
             {/* 笔杆纹理 */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#F5DEB3]/20 to-transparent rounded-full" />
             {/* 竹节 */}
@@ -60,15 +60,15 @@ const CustomCursor: React.FC = () => {
           {/* 笔头金属套 */}
           <div className={`absolute transition-all duration-300 ${
             isHovering ? 'w-2.5 h-4' : 'w-2 h-3'
-          } bg-gradient-to-b from-[#E6E6FA] via-[#C0C0C0] to-[#808080] rounded-sm -top-3 left-1/2 transform -translate-x-1/2 shadow-sm border border-[#A9A9A9]/50`}>
+          } bg-gradient-to-b from-[#E6E6FA] via-[#C0C0C0] to-[#808080] rounded-sm left-1/2 transform -translate-x-1/2 shadow-sm border border-[#A9A9A9]/50`} style={{ top: isHovering ? '16px' : '12px' }}>
             {/* 金属光泽 */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-sm" />
           </div>
           
           {/* 毛笔头主体 */}
-          <div className={`relative transition-all duration-300 ${
+          <div className={`absolute transition-all duration-300 ${
             isHovering ? 'w-4 h-10' : 'w-3 h-8'
-          } left-1/2 transform -translate-x-1/2`}>
+          } left-1/2 transform -translate-x-1/2`} style={{ top: isHovering ? '20px' : '15px' }}>
             
             {/* 毛笔头基础形状 - 水滴形 */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#696969] via-[#2F4F4F] to-[#000000] rounded-b-full"
