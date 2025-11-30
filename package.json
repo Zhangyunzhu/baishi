@@ -11,6 +11,7 @@
     "fill-images": "node scripts/fill-missing-images.js",
     "replace-images": "node scripts/replace-images.js",
     "optimize-images": "node scripts/optimize-images.js",
+    "optimize-single": "node scripts/optimize-single-image.js",
     "setup-images": "npm run download-images && npm run fill-images"
   },
   "dependencies": {
