@@ -80,8 +80,8 @@ const CustomCursor: React.FC = () => {
                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
                  }} />
             
-            {/* 毛笔尖端 - 精确指向圆圈中心，不超出笔头 */}
-            <div className="absolute bottom-0 right-0 w-1 h-2 bg-gradient-to-b from-[#2F4F4F] to-[#000000] rounded-full transform translate-x-1/2" />
+            {/* 毛笔尖端 - 精确指向圆圈中心 */}
+            <div className="absolute bottom-0 right-0 w-1 h-3 bg-gradient-to-b from-[#2F4F4F] to-[#000000] rounded-full transform translate-x-1/2 translate-y-1/2" />
             
             {/* 毛丝纹理层 - 简化版本 */}
             <div className="absolute inset-0 opacity-40">
@@ -95,15 +95,6 @@ const CustomCursor: React.FC = () => {
             <div className="absolute top-1/4 left-1/4 w-px h-1/2 bg-gradient-to-b from-white/40 to-transparent" />
           </div>
         </div>
-        
-        {/* 墨迹效果 - 悬停时在圆圈中心显示 */}
-        {isHovering && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.6, scale: 1 }}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#1A1A1A] rounded-full blur-sm"
-          />
-        )}
         
         {/* 悬停时的墨水扩散效果 - 从圆圈中心扩散 */}
         {isHovering && (
