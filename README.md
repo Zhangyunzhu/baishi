@@ -42,7 +42,7 @@
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/baishi.git
+   git clone https://github.com/Zhangyunzhu/baishi.git
    cd baishi
    ```
 
@@ -148,7 +148,7 @@ npm run build
 
 如有问题或建议，请通过以下方式联系：
 - 📧 Email: your-email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/baishi/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/Zhangyunzhu/baishi/issues)
 
 ---
 
