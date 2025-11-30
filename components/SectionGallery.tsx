@@ -15,7 +15,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1950',
     category: 'painting',
-    image: '/images/artworks/artwork-001.jpg',
+    image: '/images/artworks/artwork-001.webp',
     description: '齐白石最著名的虾画作品之一，用墨浓淡相宜，群虾形态各异，栩栩如生。每只虾都透明如水晶，仿佛在水中畅游，极具生命力。',
     dimensions: '136cm x 68cm',
     material: '宣纸 / 水墨'
@@ -26,7 +26,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1952',
     category: 'painting',
-    image: '/images/artworks/artwork-002.jpg',
+    image: '/images/artworks/artwork-002.webp',
     description: '虾蟹同绘，展现了齐白石对水族生物的深入观察和精湛技艺。虾的透明质感与蟹的坚硬外壳形成鲜明对比。',
     dimensions: '96cm x 52cm',
     material: '宣纸 / 水墨'
@@ -37,7 +37,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1955',
     category: 'painting',
-    image: '/images/artworks/artwork-003.jpg',
+    image: '/images/artworks/artwork-003.webp',
     description: '喇叭花盛开，色彩鲜艳，笔法洒脱。齐白石善于捕捉花卉的神韵，将平凡的喇叭花画得生机勃勃。',
     dimensions: '68cm x 45cm',
     material: '宣纸 / 水墨'
@@ -48,7 +48,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1948',
     category: 'painting',
-    image: '/images/artworks/artwork-004.jpg',
+    image: '/images/artworks/artwork-004.webp',
     description: '梅花傲雪，寓意高洁。齐白石笔下的梅花既有传统文人画的雅致，又有民间艺术的朴实，别具一格。',
     dimensions: '180cm x 47cm',
     material: '宣纸 / 水墨'
@@ -59,7 +59,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1954',
     category: 'painting',
-    image: '/images/artworks/artwork-005.jpg',
+    image: '/images/artworks/artwork-005.webp',
     description: '瓜果与蜜蜂的组合，体现了齐白石对田园生活的热爱。蜜蜂勤劳采蜜，寓意勤劳致富的美好愿望。',
     dimensions: '68cm x 68cm',
     material: '宣纸 / 水墨'
@@ -70,7 +70,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1956',
     category: 'painting',
-    image: '/images/artworks/artwork-006.jpg',
+    image: '/images/artworks/artwork-006.webp',
     description: '紫藤花串串垂下，如紫色瀑布。齐白石用简练的笔法表现出紫藤的柔美和生命力，色彩淡雅而富有诗意。',
     dimensions: '96cm x 52cm',
     material: '宣纸 / 水墨'
@@ -81,7 +81,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1953',
     category: 'painting',
-    image: '/images/artworks/artwork-007.jpg',
+    image: '/images/artworks/artwork-007.webp',
     description: '棕榈树下蛐蛐鸣叫，充满了乡土气息。齐白石善于从平凡的乡村生活中发现美，并用画笔记录下来。',
     dimensions: '高 45cm',
     material: '宣纸 / 水墨'
@@ -92,7 +92,7 @@ const ARTWORKS: Artwork[] = [
     artist: '齐白石',
     year: '1951',
     category: 'painting',
-    image: '/images/artworks/artwork-008.jpg',
+    image: '/images/artworks/artwork-008.webp',
     description: '草虫册页是齐白石的经典题材，工笔草虫配写意花卉，工写结合，展现了大师深厚的绘画功底。',
     dimensions: '20cm x 15cm',
     material: '宣纸 / 水墨'

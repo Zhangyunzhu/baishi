@@ -12,21 +12,21 @@ const FEATURED_ART = [
     id: '1',
     title: '渔村晚归',
     subtitle: '山水情怀',
-    image: '/images/hero/hero-001.jpg',
+    image: '/images/hero/hero-001.webp',
     desc: '齐白石山水画代表作，渔村炊烟袅袅，展现了大师对故乡的深情眷恋。'
   },
   {
     id: '2',
     title: '威风凛凛',
     subtitle: '虎啸山林',
-    image: '/images/hero/hero-002.jpg',
+    image: '/images/hero/hero-002.webp',
     desc: '齐白石虎画精品，虎威凛凛，笔法雄健，展现了画家深厚的功力。'
   },
   {
     id: '3',
     title: '梅花傲雪',
     subtitle: '高洁品格',
-    image: '/images/hero/hero-003.jpg',
+    image: '/images/hero/hero-003.webp',
     desc: '梅花凌寒独放，寓意高洁品格，体现了齐白石对传统文人精神的追求。'
   }
 ];

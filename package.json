@@ -10,17 +10,19 @@
     "download-images": "node scripts/simple-download.js",
     "fill-images": "node scripts/fill-missing-images.js",
     "replace-images": "node scripts/replace-images.js",
+    "optimize-images": "node scripts/optimize-images.js",
     "setup-images": "npm run download-images && npm run fill-images"
   },
   "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "framer-motion": "^12.23.24",
     "lucide-react": "^0.553.0",
-    "framer-motion": "^12.23.24"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "sharp": "^0.34.5",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
