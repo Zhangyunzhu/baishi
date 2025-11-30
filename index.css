@@ -13,9 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* 微信浏览器安全区域适配 */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
+  /* 移动端安全区域适配 - 只在底部添加，顶部由导航栏处理 */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 html {

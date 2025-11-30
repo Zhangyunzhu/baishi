@@ -10,7 +10,7 @@ import { ChevronRight } from 'lucide-react';
 const FEATURED_ART = [
   {
     id: '1',
-    title: '齐燕君传承',
+    title: '白石后人齐燕君',
     subtitle: '白石曾孙女',
     image: '/images/hero/hero-001.webp',
     desc: '齐燕君（1944-），齐白石曾孙女，祖父齐良元乃齐白石长子。少年学画，曾得白石老人指授，擅长画虾蟹，深得齐派家风，现隐居南岳专心绘事。'

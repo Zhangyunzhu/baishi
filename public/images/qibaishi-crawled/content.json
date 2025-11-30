@@ -1,0 +1,25 @@
+{
+  "title": "搜索 - 范围搜索",
+  "images": [],
+  "headings": [
+    "搜藏品"
+  ],
+  "paragraphs": [],
+  "allText": [
+    "搜藏品"
+  ],
+  "crawlTime": "2025-11-30T06:26:36.004Z",
+  "htmlLength": 42339,
+  "downloadedImages": [],
+  "sourceUrl": "https://g2.ltfc.net/search?searchType=ALL_SOURCE&curTab=HUIA&keyword=%E9%BD%90%E7%99%BD%E7%9F%B3&sortBy=score",
+  "totalImages": 0,
+  "successfulDownloads": 0,
+  "crawlStats": {
+    "htmlLength": 42339,
+    "imagesFound": 0,
+    "imagesDownloaded": 0,
+    "headingsFound": 1,
+    "paragraphsFound": 0,
+    "totalTextSegments": 1
+  }
+}

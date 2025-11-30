@@ -45,10 +45,9 @@ const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed left-0 right-0 z-50 transition-all duration-500 flex justify-center px-4 pointer-events-none
-          ${isWeChat ? 'top-[60px]' : 'top-0'}`}
+        className="fixed left-0 right-0 top-0 z-50 transition-all duration-500 flex justify-center px-4 pointer-events-none"
         style={{ 
-          paddingTop: isWeChat ? 'env(safe-area-inset-top)' : '0'
+          paddingTop: 'env(safe-area-inset-top, 0px)'
         }}
       >
         <div className={`relative pointer-events-auto flex items-center justify-between px-8 py-3 transition-all duration-500 

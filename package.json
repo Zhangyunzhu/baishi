@@ -12,7 +12,10 @@
     "replace-images": "node scripts/replace-images.js",
     "optimize-images": "node scripts/optimize-images.js",
     "optimize-single": "node scripts/optimize-single-image.js",
-    "setup-images": "npm run download-images && npm run fill-images"
+    "setup-images": "npm run download-images && npm run fill-images",
+    "crawl-qibaishi": "node scripts/qibaishi-crawler.js",
+    "crawl-qibaishi-enhanced": "node scripts/enhanced-qibaishi-crawler.js",
+    "crawl-qibaishi-api": "node scripts/api-qibaishi-crawler.js"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
