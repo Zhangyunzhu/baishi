@@ -14,8 +14,13 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isWeChat, setIsWeChat] = useState(false);
 
   useEffect(() => {
+    // 检测是否在微信浏览器中
+    const ua = navigator.userAgent.toLowerCase();
+    setIsWeChat(ua.includes('micromessenger'));
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -40,7 +45,11 @@ const Navigation: React.FC<NavigationProps> = ({ onNavigate }) => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center px-4 pointer-events-none`}
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 flex justify-center px-4 pointer-events-none
+          ${isWeChat ? 'top-[60px]' : 'top-0'}`}
+        style={{ 
+          paddingTop: isWeChat ? 'env(safe-area-inset-top)' : '0'
+        }}
       >
         <div className={`relative pointer-events-auto flex items-center justify-between px-8 py-3 transition-all duration-500 
           ${scrolled 

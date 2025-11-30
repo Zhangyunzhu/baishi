@@ -13,11 +13,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* 微信浏览器安全区域适配 */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 html {
   margin: 0;
   padding: 0;
+  /* 移动端优化：禁止双击缩放 */
+  touch-action: manipulation;
+}
+
+/* 图片优化：硬件加速 */
+img {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* 隐藏默认鼠标，使用自定义鼠标 */

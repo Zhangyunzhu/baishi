@@ -34,6 +34,32 @@ const FEATURED_ART = [
 const SectionHero: React.FC<{ onNavigate: (id: string) => void }> = ({ onNavigate }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  const [imagesPreloaded, setImagesPreloaded] = useState(false);
+
+  // 预加载所有轮播图片
+  useEffect(() => {
+    const preloadImages = async () => {
+      const promises = FEATURED_ART.map(art => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = resolve;
+          img.onerror = reject;
+          img.src = art.image;
+        });
+      });
+
+      try {
+        await Promise.all(promises);
+        setImagesPreloaded(true);
+        setLoaded(true);
+      } catch (error) {
+        console.error('图片预加载失败:', error);
+        setLoaded(true); // 即使失败也继续显示
+      }
+    };
+
+    preloadImages();
+  }, []);
 
   // Auto-play carousel
   useEffect(() => {
