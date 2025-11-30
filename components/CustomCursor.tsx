@@ -32,7 +32,7 @@ const CustomCursor: React.FC = () => {
   return (
     <motion.div
       className="fixed top-0 left-0 z-[9999] pointer-events-none hidden md:block brush-cursor"
-      style={{ x, y, translateX: '-50%', translateY: '-50%' }}
+      style={{ x, y, translateX: '-15px', translateY: '-70px' }}
     >
       <motion.div
         className="relative"
@@ -42,16 +42,13 @@ const CustomCursor: React.FC = () => {
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        {/* 红色印章效果环 - 作为基准圆圈 */}
-        <div className="absolute w-8 h-8 border border-[#C83C23] rounded-full opacity-30 animate-pulse top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-        
-        {/* 毛笔整体容器 - 斜向45度，笔尖指向圆圈中心 */}
+        {/* 毛笔整体容器 - 斜向45度 */}
         <div className="relative transform rotate-45 origin-center">
           
-          {/* 笔杆 - 木质/竹质，向左上方延伸 */}
+          {/* 笔杆 - 木质/竹质 */}
           <div className={`absolute transition-all duration-300 ${
             isHovering ? 'w-2 h-16' : 'w-1.5 h-12'
-          } bg-gradient-to-b from-[#DEB887] via-[#D2B48C] to-[#CD853F] rounded-full -top-16 -left-1 shadow-md border border-[#CD853F]/30`}>
+          } bg-gradient-to-b from-[#DEB887] via-[#D2B48C] to-[#CD853F] rounded-full -top-12 left-1/2 transform -translate-x-1/2 shadow-md border border-[#CD853F]/30`}>
             {/* 笔杆纹理 */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#F5DEB3]/20 to-transparent rounded-full" />
             {/* 竹节 */}
@@ -63,15 +60,15 @@ const CustomCursor: React.FC = () => {
           {/* 笔头金属套 */}
           <div className={`absolute transition-all duration-300 ${
             isHovering ? 'w-2.5 h-4' : 'w-2 h-3'
-          } bg-gradient-to-b from-[#E6E6FA] via-[#C0C0C0] to-[#808080] rounded-sm -top-6 -left-1 shadow-sm border border-[#A9A9A9]/50`}>
+          } bg-gradient-to-b from-[#E6E6FA] via-[#C0C0C0] to-[#808080] rounded-sm -top-3 left-1/2 transform -translate-x-1/2 shadow-sm border border-[#A9A9A9]/50`}>
             {/* 金属光泽 */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-sm" />
           </div>
           
-          {/* 毛笔头主体 - 笔尖指向圆圈中心 */}
-          <div className={`absolute transition-all duration-300 ${
+          {/* 毛笔头主体 */}
+          <div className={`relative transition-all duration-300 ${
             isHovering ? 'w-4 h-10' : 'w-3 h-8'
-          } -top-2 -left-2`}>
+          } left-1/2 transform -translate-x-1/2`}>
             
             {/* 毛笔头基础形状 - 水滴形 */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#696969] via-[#2F4F4F] to-[#000000] rounded-b-full"
@@ -80,8 +77,8 @@ const CustomCursor: React.FC = () => {
                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
                  }} />
             
-            {/* 毛笔尖端 - 精确指向圆圈中心 */}
-            <div className="absolute bottom-0 right-0 w-1 h-3 bg-gradient-to-b from-[#2F4F4F] to-[#000000] rounded-full transform translate-x-1/2 translate-y-1/2" />
+            {/* 毛笔尖端 */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-3 bg-gradient-to-b from-[#2F4F4F] to-[#000000] rounded-full" />
             
             {/* 毛丝纹理层 - 简化版本 */}
             <div className="absolute inset-0 opacity-40">
@@ -96,13 +93,25 @@ const CustomCursor: React.FC = () => {
           </div>
         </div>
         
-        {/* 悬停时的墨水扩散效果 - 从圆圈中心扩散 */}
+        {/* 墨迹效果 - 悬停时显示 */}
+        {isHovering && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 0.6, scale: 1 }}
+            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#1A1A1A] rounded-full blur-sm"
+          />
+        )}
+        
+        {/* 红色印章效果环 */}
+        <div className="absolute w-8 h-8 border border-[#C83C23] rounded-full opacity-20 animate-pulse" />
+        
+        {/* 悬停时的墨水扩散效果 */}
         {isHovering && (
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 0.3, scale: 2 }}
             transition={{ duration: 0.8, repeat: Infinity }}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#C83C23] rounded-full"
+            className="absolute w-2 h-2 bg-[#C83C23] rounded-full"
           />
         )}
       </motion.div>
