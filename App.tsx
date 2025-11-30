@@ -4,7 +4,6 @@
 */
 
 import React from 'react';
-import InkBackground from './components/InkBackground';
 import CustomCursor from './components/CustomCursor';
 import Navigation from './components/Navigation';
 import SectionHero from './components/SectionHero';
@@ -23,7 +22,6 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen">
       <CustomCursor />
-      <InkBackground />
       <Navigation onNavigate={handleNavigate} />
       
       <main>
